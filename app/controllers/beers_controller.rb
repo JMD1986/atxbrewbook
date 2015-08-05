@@ -15,6 +15,8 @@ class BeersController < ApplicationController
   # GET /beers/new
   def new
     @beer = Beer.new
+    # @style = Style.find_or_create_by(style_params)
+    # @brewery = Brewery.find_or_create_by(brewery_params)
   end
 
   # GET /beers/1/edit
@@ -69,6 +71,6 @@ class BeersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def beer_params
-      params.require(:beer).permit(:name, :style, :brewery_id)
+      params.require(:beer).permit(:name, :brewery_id)
     end
 end

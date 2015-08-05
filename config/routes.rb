@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :styles
   resources :beers
-  resources :breweries
+  resources :styles
   resources :breweries
   get 'welcome' => 'breweries#welcome'
 
