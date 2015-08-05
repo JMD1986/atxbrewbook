@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :beers
   resources :breweries
   resources :breweries
   get 'welcome' => 'breweries#welcome'
