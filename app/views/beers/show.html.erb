@@ -35,8 +35,16 @@
           <%= f.text_field :review %>
         </div>
         <div class="field">
-          <%= f.label :like %><br>
-          <%= f.text_field :like %>
+          <%= f.hidden_field :like, value: 1 %>
+        </div>
+         <div class="field">
+          <%= f.hidden_field :user_id, value: current_user.id %>
+        </div>
+        <div class="field">
+          <%= f.hidden_field :brewery_id, value: @beer.brewery.id %>
+        </div>
+        <div class="field">
+          <%= f.hidden_field :beer_id, value: @beer.id %>
         </div>
         <div class="actions">
           <%= f.submit %>
