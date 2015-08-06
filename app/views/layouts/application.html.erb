@@ -16,7 +16,11 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <div class="row">
+        <%= link_to "Beers", beers_path, class: 'col s2 offset-4' %>
+        <%= link_to "Styles", styles_path, class: 'col s2'  %>
+        <%= link_to "Breweries", breweries_path, class: 'col s2'  %>
+    </div>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
