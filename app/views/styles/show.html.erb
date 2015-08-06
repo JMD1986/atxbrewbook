@@ -3,7 +3,9 @@
   <strong>Name:</strong>
   <%= @style.name %>
 </p>
-
-
+<% @beers.each do |beer| %>
+<p><%= beer.name %></p>
+<p><%= beer.brewery.name %></p>
+<% end %>
 <%= link_to 'Edit', edit_style_path(@style) %> |
 <%= link_to 'Back', styles_path %>
