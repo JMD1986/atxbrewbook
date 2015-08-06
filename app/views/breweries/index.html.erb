@@ -16,7 +16,7 @@
   <tbody>
     <% @breweries.each do |brewery| %>
       <tr>
-        <td><%= brewery.name %></td>
+        <td><%= link_to brewery.name, brewery %></td>
         <td><%= brewery.location %></td>
         <td><%= brewery.website %></td>
         <td><%= brewery.phone_number %></td>
