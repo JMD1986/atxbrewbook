@@ -5,12 +5,14 @@ class BreweriesController < ApplicationController
   # GET /breweries.json
   def index
     @breweries = Brewery.all
+    @opinion = Opinion.where(brewery_id: params[:id])
   end
 
   # GET /breweries/1
   # GET /breweries/1.json
   def show
     @beers = Beer.where(brewery_id: params[:id])
+    @opinion = Opinion.where(brewery_id: params[:id])
   end
 
   # GET /breweries/new

@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :styles
   resources :breweries
   resources :opinions
+  resources :users
   get 'welcome' => 'breweries#welcome'
 
   root "breweries#index"
