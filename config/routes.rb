@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :beers
   resources :styles
   resources :breweries
+  resources :opinions
   get 'welcome' => 'breweries#welcome'
 
   root "breweries#index"

@@ -19,5 +19,11 @@
   <%= @brewery.phone_number %>
 </p>
 
+<% @beers.each do |beer| %>
+  <%= link_to beer.name, beer %>
+  <%= link_to beer.style.name, beer.style %>
+<% end %>
+
+
 <%= link_to 'Edit', edit_brewery_path(@brewery) %> |
 <%= link_to 'Back', breweries_path %>

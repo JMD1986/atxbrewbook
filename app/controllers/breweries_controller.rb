@@ -10,6 +10,7 @@ class BreweriesController < ApplicationController
   # GET /breweries/1
   # GET /breweries/1.json
   def show
+    @beers = Beer.where(brewery_id: params[:id])
   end
 
   # GET /breweries/new
