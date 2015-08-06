@@ -11,6 +11,7 @@ class BeersController < ApplicationController
   # GET /beers/1.json
   def show
     @opinion = Opinion.new
+    @rating = @beer.average_rating
   end
 
   # GET /beers/new
