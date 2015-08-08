@@ -1,4 +1,4 @@
 
   <% @opinion.each do |opinion| %>
-  <%= link_to opinion.beer.name, opinion.beer %>
+  <%= link_to opinion.beer.name, opinion.beer %><%= opinion.beer.brewery.name %><%= opinion.beer.average_rating %>
   <% end %>
