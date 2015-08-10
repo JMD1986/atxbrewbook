@@ -6,11 +6,11 @@ class Beer < ActiveRecord::Base
   belongs_to :brewery
 
     def average_rating
-    if opinions.count > 0
-      opinions.pluck(:rating).sum / opinions.count
-    else
-      0
+      if opinions.count > 0
+        opinions.pluck(:rating).sum / opinions.count
+      else
+        0
+      end
     end
-  end
 
 end

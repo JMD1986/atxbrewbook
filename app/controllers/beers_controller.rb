@@ -16,6 +16,7 @@ class BeersController < ApplicationController
 
   # GET /beers/new
   def new
+    @brewery = Brewery.where(brewery_id: params[:id])
     @beer = Beer.new
     # @style = Style.find_or_create_by(style_params)
     # @brewery = Brewery.find_or_create_by(brewery_params)
@@ -73,6 +74,6 @@ class BeersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def beer_params
-      params.require(:beer).permit(:name, :brewery_id)
+      params.require(:beer).permit(:name, :brewery_id, :style_id)
     end
 end

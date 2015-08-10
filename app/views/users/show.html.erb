@@ -1,0 +1,8 @@
+
+<%= @user %>
+
+<% @opinions.each do |review| %>
+<%= link_to review.beer.name, review.beer %>
+<%= link_to review.beer.brewery.name, review.beer.brewery %>
+<%= review.beer.average_rating %>
+<% end %>
